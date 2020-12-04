@@ -1,0 +1,76 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Cera Pro;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify content: center;
+  align-items: center;
+  background-color: #232323;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn{
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #FFCE03;
+  padding: 5px 10px;
+  background-color: #008F70;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  border-color: #232323;
+}
+
+.btn.correct{
+  background-color: #00CFA7;
+}
+
+.btn.wrong{
+  background-color: #FF1160;
+}
+
+.start-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.next-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide{
+  display: none
+}
