@@ -1,6 +1,8 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: Cera Pro;
+  font-family: PT Sans;
+  color: #FFFFFF;
+  font-size: 17px;
 }
 
 body {
@@ -9,60 +11,95 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify content: center;
+  justify-content: center;
   align-items: center;
   background-color: #232323;
+  text-align: center;
+  background-image: url(CHARCOAL\ OVERLAY.png);
+  background-size: 1300px;
+}
+
+.start-screen{
+  justify-content: center;
+  font-style: bold;
+}
+
+.start-text {
+  position: center;
+  margin: 10px;
+  text-align: center
 }
 
 .container {
-  width: 800px;
+  width: 540px;
   max-width: 80%;
-  background-color: #FFFFFF;
-  border-radius: 5px;
+  background-color: transparent;
   padding: 10px;
-  box-shadow: 0 0 10px 2px;
+  border: none
 }
 
-.btn-grid{
+.btn-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin: 20px 0;
 }
 
-.btn{
-  border: 2px solid;
-  border-radius: 5px;
-  border-color: #FFCE03;
+.numbers {
+  margin-bottom: 10px;
+}
+
+.btn {
   padding: 5px 10px;
-  background-color: #008F70;
   outline: none;
-  color: #FFFFFF;
-  font-size: 1.5rem;
+  height: 101;
+  width: 260;
+  background-image: url(Board.png);
+  background-color: transparent;
+  background-size: 260px 101px;
+  background-repeat: no-repeat;
+  padding-left: 27px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+}
+
+#robot-start{
+  margin-bottom: 10px;
 }
 
 .btn:hover {
-  border-color: #232323;
+  border-color: transparent;
 }
 
-.btn.correct{
-  background-color: #00CFA7;
+.btn.correct {
+  background-image: url(CorrectBoard.png);
+  background-size: 260px 101px;
+  background-color: transparent;
+  background-repeat: no-repeat
 }
 
-.btn.wrong{
-  background-color: #FF1160;
+.btn.wrong {
+  background-image: url(WrongBoard.png);
+  background-size: 260px 101px;
+  background-color: transparent;
+  background-repeat: no-repeat
+}
+
+.btn:focus{
+  outline:none
 }
 
 .start-btn {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 10px 20px;
+  margin-top: 10px;
+  height: 35px;
+  width: 120px;
 }
 
 .next-btn {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 10px 20px;
+  margin-top: 10px;
+  height: 35px;
+  width: 120px;
 }
 
 .controls {
@@ -71,6 +108,6 @@ body {
   align-items: center;
 }
 
-.hide{
-  display: none
+.hide {
+  display:none;
 }
