@@ -102,6 +102,18 @@ body {
   width: 120px;
 }
 
+.restart-btn {
+  margin-top: 10px;
+  height: 72px;
+  width: 200px;
+}
+
+.return-btn {
+  margin-top: 10px;
+  height: 72px;
+  width: 200px;
+}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -110,4 +122,12 @@ body {
 
 .hide {
   display:none;
+}
+
+.counter{
+  background-image: url(Purple\ Button.png);
+  background-size: 120px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: none;
 }
