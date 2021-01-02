@@ -1,27 +1,23 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const restartButton = document.getElementById('restart-btn')
+const returnButton = document.getElementById('return-btn')
 const startText = document.getElementById('start-text')
 const startImage = document.getElementById('robot-start')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
-const numberOne = document.getElementById('number-one')
-const numberTwo = document.getElementById('number-two')
-const numberThree = document.getElementById('number-three')
-const numberFour = document.getElementById('number-four')
-const numberFive = document.getElementById('number-five')
-const numberSix = document.getElementById('number-six')
-const numberSeven = document.getElementById('number-seven')
-const numberEight = document.getElementById('number-eight')
-const numberNine = document.getElementById('number-nine')
-const numberTen = document.getElementById('number-ten')
-const numbers = document.getElementById('numbers')
+const questionCounter = document.getElementById('right-answers')
+const passEndPage = document.getElementById("pass-page")
+const failEndPage = document.getElementById("fail-page")
 
 let shuffledQuestions, currentQuestionIndex
 let countRightAnswers = 0
 
 startButton.addEventListener('click', startGame)
+returnButton.addEventListener('click', startGame)
+restartButton.addEventListener('click', startGame)
+
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -31,9 +27,13 @@ function startGame() {
   startButton.classList.add('hide')
   startText.classList.add('hide')
   startImage.classList.add('hide')
+  restartButton.classList.add('hide')
+  returnButton.classList.add('hide')
+  passEndPage.classList.add('hide')
+  failEndPage.classList.add('hide')
+  questionContainerElement.classList.remove('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
   setNextQuestion()
   countRightAnswers = 0;
 }
@@ -75,14 +75,23 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    if (countRightAnswers > 7) {
+      returnButton.classList.remove('hide')
+      passEndPage.classList.remove('hide')
+      questionContainerElement.classList.add('hide')
+    }
+    else{
+      restartButton.classList.remove('hide')
+      failEndPage.classList.remove('hide')
+      questionContainerElement.classList.add('hide')
+    }
   }
   document.getElementById('right-answers').innerHTML = countRightAnswers;
-  if (selectedButton.dataset = correct) {
+    if (selectedButton.dataset = correct) {
     countRightAnswers++;
-  }
+    }  
 }
+
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
