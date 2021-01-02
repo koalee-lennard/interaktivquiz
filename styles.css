@@ -17,6 +17,7 @@ body {
   text-align: center;
   background-image: url(CHARCOAL\ OVERLAY.png);
   background-size: 1300px;
+  background-repeat:no-repeat;
 }
 
 .start-screen{
@@ -26,7 +27,6 @@ body {
 
 .start-text {
   position: center;
-  margin: 10px;
   text-align: center
 }
 
@@ -50,7 +50,6 @@ body {
 }
 
 .btn {
-  padding: 5px 10px;
   outline: none;
   height: 101;
   width: 260;
@@ -60,12 +59,13 @@ body {
   background-repeat: no-repeat;
   padding-left: 27px;
   padding-top: 12px;
-  padding-right: 10px;
+  padding-right: 15px;
   padding-bottom: 0px;
+  border: none;
 }
 
 #robot-start{
-  margin-bottom: 10px;
+  position: center;
 }
 
 .btn:hover {
@@ -102,6 +102,18 @@ body {
   width: 120px;
 }
 
+.restart-btn {
+  margin-top: 10px;
+  height: 72px;
+  width: 200px;
+}
+
+.return-btn {
+  margin-top: 10px;
+  height: 72px;
+  width: 200px;
+}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -110,4 +122,16 @@ body {
 
 .hide {
   display:none;
+}
+
+.counter{
+  background-image: url(Purple\ Button.png);
+  background-size: 120px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: none;
+}
+
+.question-title{
+  margin-bottom: 10px;
 }
