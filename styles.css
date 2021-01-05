@@ -16,8 +16,9 @@ body {
   background-color: #232323;
   text-align: center;
   background-image: url(CHARCOAL\ OVERLAY.png);
-  background-size: 1300px;
+  background-size: 1920px;
   background-repeat:no-repeat;
+  max-width: 1920px;
 }
 
 .start-screen{
