@@ -19,6 +19,7 @@ body {
   background-size: 1920px;
   background-repeat:no-repeat;
   max-width: 1920px;
+  max-height: auto;
 }
 
 .start-screen{
